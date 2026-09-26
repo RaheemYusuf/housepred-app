@@ -53,7 +53,6 @@ class PropertyData:
     rent: int
 
 
-
 # A reusable helper to translate Python types to DuckDB SQL types
 def get_duckdb_schema(model_class) -> dict:
     type_map = {
