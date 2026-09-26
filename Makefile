@@ -12,6 +12,7 @@ clean:
 	rm -rf .ruff_cache
 
 check: 
+	flake8 src/
 	ruff check src/
 
 runner: check run clean
