@@ -31,7 +31,7 @@ jobs:
         virtualenvs-in-project: true
     
     - name: Load cached venv
-      uses: actions/cache@6
+      uses: actions/cache@v6
       id: cached-peotry-dependencies
       with:
         path: .venv
