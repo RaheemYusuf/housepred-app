@@ -27,8 +27,18 @@ jobs:
 
     - name: Install poetry
       uses: stacynoland/install-poetry@v1
+      with:
+        virtualenvs-in-project: true
+    
+    - name: Load cached venv
+      uses: actions/cache@6
+      id: cached-peotry-dependencies
+      with:
+        path: .venv
+        key: venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}
 
     - name: Install dependencies using poetry
+      if: steps.cached-peotry-dependencies.outputs.cache-hit != 'true'
       run: poetry run make install
 
     - name: Lint with flake8
