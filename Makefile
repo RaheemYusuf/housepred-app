@@ -1,8 +1,11 @@
-.PHONY: run install clean check  runner
-.DEFAULT_GOAL:=runner
+.PHONY: run_builder run_inference install clean check  runner
+.DEFAULT_GOAL:=runner_inference
 
-run: install
+run_builder: install
 	cd src; python3 runner_builder.py
+
+run_inference: install
+	cd src; python3 runner_inference.py
 
 install: pyproject.toml
 	poetry install --no-root
@@ -15,4 +18,5 @@ check:
 	flake8 src/
 	ruff check src/
 
-runner: check run clean
+runner_builder: check run_builder clean
+runner_inference: check run_inference clean
