@@ -80,6 +80,7 @@ class DatabaseCon:
         types_sql = str(
             schema_dict,
         ).replace("'", "")
+        self.file_name = db_settings.data_file_name
 
         with duckdb.connect(db_settings.db_conn_str) as con:
             # 3. Drop the old table so DuckDB is forced to recreate
@@ -90,7 +91,7 @@ class DatabaseCon:
             # while importing the CSV
             query = f"""
                 CREATE TABLE IF NOT EXISTS {table_name} AS
-                SELECT * FROM read_csv('{table_name}', types={types_sql})
+                SELECT * FROM read_csv('{self.file_name}', types={types_sql})
             """
             con.execute(query)
 

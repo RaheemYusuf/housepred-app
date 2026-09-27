@@ -1,35 +1,39 @@
-2026-09-25 08:33:40.389 | INFO     | __main__:main:23 - running the application...
-2026-09-25 08:33:40.390 | INFO     | model.model_service:load_model:46 - checking the exitence of model config file at model/models/rf_db_v2
-2026-09-25 08:33:40.390 | INFO     | model.model_service:load_model:58 - model rf_db_v2 exists! -> loading model configuration file
-2026-09-25 08:33:40.430 | INFO     | model.model_service:predict:79 - making prediction!
-2026-09-25 08:33:40.453 | INFO     | __main__:main:40 - prediction = [1988.11041667]
-2026-09-25 08:39:21.391 | INFO     | __main__:main:23 - running the application...
-2026-09-25 08:39:21.391 | INFO     | model.model_service:load_model:46 - checking the exitence of model config file at model/models/rf_db_v2
-2026-09-25 08:39:21.391 | INFO     | model.model_service:load_model:58 - model rf_db_v2 exists! -> loading model configuration file
-2026-09-25 08:39:21.434 | INFO     | model.model_service:predict:79 - making prediction!
-2026-09-25 08:39:21.455 | INFO     | __main__:main:40 - prediction = [1988.11041667]
-2026-09-25 08:40:24.084 | INFO     | __main__:main:23 - running the application...
-2026-09-25 08:40:24.085 | INFO     | model.model_service:load_model:46 - checking the exitence of model config file at model/models/rf_db_v2
-2026-09-25 08:40:24.085 | INFO     | model.model_service:load_model:58 - model rf_db_v2 exists! -> loading model configuration file
-2026-09-25 08:40:24.130 | INFO     | model.model_service:predict:79 - making prediction!
-2026-09-25 08:40:24.152 | INFO     | __main__:main:40 - prediction = [1988.11041667]
-2026-09-25 08:42:56.637 | INFO     | __main__:main:23 - running the application...
-2026-09-25 08:42:56.637 | INFO     | model.model_service:load_model:46 - checking the exitence of model config file at model/models/rf_db_v2
-2026-09-25 08:42:56.637 | INFO     | model.model_service:load_model:58 - model rf_db_v2 exists! -> loading model configuration file
-2026-09-25 08:42:56.675 | INFO     | model.model_service:predict:79 - making prediction!
-2026-09-25 08:42:56.702 | INFO     | __main__:main:40 - prediction = [1988.11041667]
-2026-09-25 08:48:53.458 | INFO     | __main__:main:23 - running the application...
-2026-09-25 08:48:53.461 | INFO     | model.model_service:load_model:46 - checking the exitence of model config file at model/models/rf_db_v2
-2026-09-25 08:48:53.461 | INFO     | model.model_service:load_model:58 - model rf_db_v2 exists! -> loading model configuration file
-2026-09-25 08:48:53.498 | INFO     | model.model_service:predict:79 - making prediction!
-2026-09-25 08:48:53.519 | INFO     | __main__:main:40 - prediction = [1988.11041667]
-2026-09-25 08:49:47.365 | INFO     | __main__:main:23 - running the application...
-2026-09-25 08:49:47.365 | INFO     | model.model_service:load_model:46 - checking the exitence of model config file at model/models/rf_db_v2
-2026-09-25 08:49:47.365 | INFO     | model.model_service:load_model:58 - model rf_db_v2 exists! -> loading model configuration file
-2026-09-25 08:49:47.400 | INFO     | model.model_service:predict:79 - making prediction!
-2026-09-25 08:49:47.420 | INFO     | __main__:main:40 - prediction = [1988.11041667]
-2026-09-25 08:52:50.460 | INFO     | __main__:main:23 - running the application...
-2026-09-25 08:52:50.461 | INFO     | model.model_service:load_model:46 - checking the exitence of model config file at model/models/rf_db_v2
-2026-09-25 08:52:50.461 | INFO     | model.model_service:load_model:58 - model rf_db_v2 exists! -> loading model configuration file
-2026-09-25 08:52:50.503 | INFO     | model.model_service:predict:79 - making prediction!
-2026-09-25 08:52:50.527 | INFO     | __main__:main:40 - prediction = [1988.11041667]
+2026-09-27 11:26:36.741 | INFO     | __main__:main:22 - running the application...
+2026-09-27 11:26:36.741 | INFO     | model.model_builder:train_model:44 - building the model config file at model/models/rf_db_v3
+2026-09-27 11:26:36.741 | INFO     | model.pipeline.model:build_model:37 - starting up model building pipeline
+2026-09-27 11:26:36.741 | INFO     | model.pipeline.preparation:prepare_data:26 - starting up preprocessing pipeline
+2026-09-27 11:26:36.741 | INFO     | model.pipeline.collection:load_data_from_db:37 - Reading data from rent_apartments
+2026-09-27 11:26:36.909 | INFO     | model.pipeline.preparation:_encode_cat_cols:56 - encoding categorical columns: ['balcony', 'storage', 'parking', 'furnished', 'garage']
+2026-09-27 11:26:36.927 | INFO     | model.pipeline.preparation:_parse_garden_col:76 - parsing garden column
+2026-09-27 11:26:37.240 | INFO     | model.pipeline.model:_get_x_y:82 - defining X and y variables. 
+X vars:        area  constraction_year  bedrooms  garden  balcony_yes  storage_yes  parking_yes  furnished_yes  garage_yes
+0     167.0               1870         2       0            1            0            0              1           0
+1     150.0               1890         2       0            1            0            1              1           0
+2     150.0               1890         2       0            1            0            1              1           0
+3      90.0               1923         2       0            1            0            0              1           0
+4     104.0               1923         2      47            0            0            0              0           0
+...     ...                ...       ...     ...          ...          ...          ...            ...         ...
+1723   75.0               1990         2       0            0            0            0              1           0
+1724   75.0               1990         2       0            1            0            0              1           0
+1725   74.0               1986         1       0            0            0            0              1           0
+1726  118.0               1920         4       0            1            1            1              1           0
+1727  110.0               2019         4       0            0            1            0              1           0
+
+[1728 rows x 9 columns]
+y var: 0       4500
+1       3450
+2       3450
+3       2000
+4       3250
+        ... 
+1723    1450
+1724    1500
+1725    1400
+1726    2650
+1727    2600
+Name: rent, Length: 1728, dtype: int64
+2026-09-27 11:26:37.240 | INFO     | model.pipeline.model:_split_train_test:100 - splitting data into train and test sets
+2026-09-27 11:26:37.245 | INFO     | model.pipeline.model:_train_model:123 - training a model with hyperparameters
+2026-09-27 11:26:37.246 | DEBUG    | model.pipeline.model:_train_model:128 - grid_space = {'n_estimators': [100, 200, 300], 'max_depth': [3, 6, 9, 12]}
+2026-09-27 11:27:05.005 | INFO     | model.pipeline.model:_evaluate_model:162 - evaluating model performance. SCORE = 0.6207638081647735
+2026-09-27 11:27:05.006 | INFO     | model.pipeline.model:_save_model:179 - saving a model to a directory: model/models/rf_db_v3

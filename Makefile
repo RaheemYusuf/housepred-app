@@ -2,7 +2,7 @@
 .DEFAULT_GOAL:=runner
 
 run: install
-	cd src; python3 runner.py
+	cd src; python3 runner_builder.py
 
 install: pyproject.toml
 	poetry install --no-root
