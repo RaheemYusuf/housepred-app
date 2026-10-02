@@ -10,7 +10,7 @@ Endpoints:
         parameters provided in the request. Query parameters should
         match the schema defined in the Apartment class.
         Returns HTTP status 400 if input paramenters are invalid.
-        
+
     - POST /pred/:
         Returns a prediction for apartment price based on the JSON
         data provided in the request body. The request body should
@@ -19,12 +19,10 @@ Endpoints:
         Returns HTTP status 400 if input parameters are invalid.
 """
 
-from flask import abort, Blueprint, request
+from flask import Blueprint, abort, request
 from pydantic import ValidationError
-
 from schema.apartment import Apartment
 from services import model_inference_service
-
 
 bp = Blueprint('prediction', __name__, url_prefix='/pred')
 

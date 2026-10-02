@@ -18,5 +18,10 @@ check:
 	flake8 src/
 	ruff check src/
 
+check_app: install
+	flake8 inference_service/
+	ruff check inference_service/
+
 runner_builder: check run_builder clean
 runner_inference: check run_inference clean
+run_inference_service: check_app clean

@@ -22,3 +22,7 @@
 2026-10-02 15:35:04.095 | INFO     | services.model_inference:load_model:58 - model rf_db_v3 exists! -> loading model configuration file
 2026-10-02 15:35:13.293 | INFO     | services.model_inference:load_model:50 - checking the exitence of model config fileat model/rf_db_v3
 2026-10-02 15:35:13.293 | INFO     | services.model_inference:load_model:58 - model rf_db_v3 exists! -> loading model configuration file
+2026-10-02 15:58:41.658 | INFO     | services.model_inference:load_model:50 - checking the exitence of model config fileat model/rf_db_v3
+2026-10-02 15:58:41.658 | INFO     | services.model_inference:load_model:58 - model rf_db_v3 exists! -> loading model configuration file
+2026-10-02 15:58:43.490 | INFO     | services.model_inference:load_model:50 - checking the exitence of model config fileat model/rf_db_v3
+2026-10-02 15:58:43.490 | INFO     | services.model_inference:load_model:58 - model rf_db_v3 exists! -> loading model configuration file

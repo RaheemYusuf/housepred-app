@@ -25,3 +25,6 @@ jobs:
 
     - name: Lint with flake8
       run: poetry run make check
+
+    - name: Lint with flake8 for inference service
+      run: poetry run make run_inference_service

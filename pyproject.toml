@@ -31,8 +31,10 @@ exclude = [
     "src/db/db.duckdb",
     "src/logs",
     "src/model/models",
-    "src/Data/data_prep.ipynb"
+    "src/Data/data_prep.ipynb",
+    "intference_service/app/config/__init__.py"
 ]
 
-[lint.per-file-ignores]
+[tool.ruff.lint.per-file-ignores]
+"inference_service/app/config/__init__.py" = ["F401"]
 "src/config/__init__.py" = ["F401"]
